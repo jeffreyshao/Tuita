@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF811FF91E5399BE004F4A64 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF811FF81E5399BE004F4A64 /* TweetCell.swift */; };
+		AF82CB8C1E50E82700852731 /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82CB8B1E50E82700852731 /* TwitterClient.swift */; };
+		AF82CB901E50F5D300852731 /* TweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82CB8F1E50F5D300852731 /* TweetsViewController.swift */; };
+		AF9FF8A71E400FC3007F08DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9FF8A61E400FC3007F08DE /* AppDelegate.swift */; };
+		AF9FF8AC1E400FC3007F08DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9FF8AA1E400FC3007F08DE /* Main.storyboard */; };
+		AF9FF8AE1E400FC3007F08DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9FF8AD1E400FC3007F08DE /* Assets.xcassets */; };
+		AF9FF8B11E400FC3007F08DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9FF8AF1E400FC3007F08DE /* LaunchScreen.storyboard */; };
+		AFD6B9D91E401110000ABEBA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD6B9D81E401110000ABEBA /* LoginViewController.swift */; };
+		AFE4058E1E494D4D0009D30E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4058D1E494D4D0009D30E /* User.swift */; };
+		AFE405901E494D560009D30E /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4058F1E494D560009D30E /* Tweet.swift */; };
+		E3A29613FF1BF0C8F4B53F8C /* Pods_Tuita.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E00C237E808D8E814EA5DCA1 /* Pods_Tuita.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2B6FE86D796D0B61C8BEC619 /* Pods-Tuita.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tuita.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tuita/Pods-Tuita.debug.xcconfig"; sourceTree = "<group>"; };
+		6369F9E0D6DA8047617C7270 /* Pods-Tuita.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tuita.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tuita/Pods-Tuita.release.xcconfig"; sourceTree = "<group>"; };
+		AF811FF81E5399BE004F4A64 /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
+		AF82CB8B1E50E82700852731 /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
+		AF82CB8F1E50F5D300852731 /* TweetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsViewController.swift; sourceTree = "<group>"; };
+		AF9FF8A31E400FC3007F08DE /* Tuita.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tuita.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF9FF8A61E400FC3007F08DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF9FF8AB1E400FC3007F08DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF9FF8AD1E400FC3007F08DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF9FF8B01E400FC3007F08DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF9FF8B21E400FC3007F08DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFD6B9D81E401110000ABEBA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AFE4058D1E494D4D0009D30E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AFE4058F1E494D560009D30E /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		E00C237E808D8E814EA5DCA1 /* Pods_Tuita.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tuita.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF9FF8A01E400FC3007F08DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3A29613FF1BF0C8F4B53F8C /* Pods_Tuita.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9A73D4AB58ABF9744BC3054B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B6FE86D796D0B61C8BEC619 /* Pods-Tuita.debug.xcconfig */,
+				6369F9E0D6DA8047617C7270 /* Pods-Tuita.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AF811FF71E5399A0004F4A64 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF811FF81E5399BE004F4A64 /* TweetCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		AF9FF89A1E400FC3007F08DE = {
+			isa = PBXGroup;
+			children = (
+				AF9FF8A51E400FC3007F08DE /* Tuita */,
+				AF9FF8A41E400FC3007F08DE /* Products */,
+				9A73D4AB58ABF9744BC3054B /* Pods */,
+				C1FFAB38920F412553AB1D8A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AF9FF8A41E400FC3007F08DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF9FF8A31E400FC3007F08DE /* Tuita.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF9FF8A51E400FC3007F08DE /* Tuita */ = {
+			isa = PBXGroup;
+			children = (
+				AF811FF71E5399A0004F4A64 /* Views */,
+				AFE4058C1E494BAB0009D30E /* APIs */,
+				AFE4058B1E494B9C0009D30E /* ViewControllers */,
+				AFE4058A1E494B940009D30E /* Models */,
+				AF9FF8A61E400FC3007F08DE /* AppDelegate.swift */,
+				AF9FF8AA1E400FC3007F08DE /* Main.storyboard */,
+				AF9FF8AD1E400FC3007F08DE /* Assets.xcassets */,
+				AF9FF8AF1E400FC3007F08DE /* LaunchScreen.storyboard */,
+				AF9FF8B21E400FC3007F08DE /* Info.plist */,
+			);
+			path = Tuita;
+			sourceTree = "<group>";
+		};
+		AFE4058A1E494B940009D30E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AFE4058D1E494D4D0009D30E /* User.swift */,
+				AFE4058F1E494D560009D30E /* Tweet.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		AFE4058B1E494B9C0009D30E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AFD6B9D81E401110000ABEBA /* LoginViewController.swift */,
+				AF82CB8F1E50F5D300852731 /* TweetsViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AFE4058C1E494BAB0009D30E /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				AF82CB8B1E50E82700852731 /* TwitterClient.swift */,
+			);
+			name = APIs;
+			sourceTree = "<group>";
+		};
+		C1FFAB38920F412553AB1D8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E00C237E808D8E814EA5DCA1 /* Pods_Tuita.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF9FF8A21E400FC3007F08DE /* Tuita */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF9FF8B51E400FC3007F08DE /* Build configuration list for PBXNativeTarget "Tuita" */;
+			buildPhases = (
+				79E23FC991D26D9FBC7C074C /* [CP] Check Pods Manifest.lock */,
+				AF9FF89F1E400FC3007F08DE /* Sources */,
+				AF9FF8A01E400FC3007F08DE /* Frameworks */,
+				AF9FF8A11E400FC3007F08DE /* Resources */,
+				4558E10C16C5CF22A69E033F /* [CP] Embed Pods Frameworks */,
+				E4449B599323E602E32EEA1A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tuita;
+			productName = Tuita;
+			productReference = AF9FF8A31E400FC3007F08DE /* Tuita.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF9FF89B1E400FC3007F08DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Jeffrey Shao";
+				TargetAttributes = {
+					AF9FF8A21E400FC3007F08DE = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = AF9FF89E1E400FC3007F08DE /* Build configuration list for PBXProject "Tuita" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF9FF89A1E400FC3007F08DE;
+			productRefGroup = AF9FF8A41E400FC3007F08DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF9FF8A21E400FC3007F08DE /* Tuita */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF9FF8A11E400FC3007F08DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF9FF8B11E400FC3007F08DE /* LaunchScreen.storyboard in Resources */,
+				AF9FF8AE1E400FC3007F08DE /* Assets.xcassets in Resources */,
+				AF9FF8AC1E400FC3007F08DE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4558E10C16C5CF22A69E033F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tuita/Pods-Tuita-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79E23FC991D26D9FBC7C074C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E4449B599323E602E32EEA1A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tuita/Pods-Tuita-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF9FF89F1E400FC3007F08DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFE4058E1E494D4D0009D30E /* User.swift in Sources */,
+				AF811FF91E5399BE004F4A64 /* TweetCell.swift in Sources */,
+				AFE405901E494D560009D30E /* Tweet.swift in Sources */,
+				AFD6B9D91E401110000ABEBA /* LoginViewController.swift in Sources */,
+				AF82CB901E50F5D300852731 /* TweetsViewController.swift in Sources */,
+				AF82CB8C1E50E82700852731 /* TwitterClient.swift in Sources */,
+				AF9FF8A71E400FC3007F08DE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AF9FF8AA1E400FC3007F08DE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF9FF8AB1E400FC3007F08DE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF9FF8AF1E400FC3007F08DE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF9FF8B01E400FC3007F08DE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF9FF8B31E400FC3007F08DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF9FF8B41E400FC3007F08DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF9FF8B61E400FC3007F08DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B6FE86D796D0B61C8BEC619 /* Pods-Tuita.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Tuita/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jeffreyshao.Tuita;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AF9FF8B71E400FC3007F08DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6369F9E0D6DA8047617C7270 /* Pods-Tuita.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Tuita/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jeffreyshao.Tuita;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF9FF89E1E400FC3007F08DE /* Build configuration list for PBXProject "Tuita" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF9FF8B31E400FC3007F08DE /* Debug */,
+				AF9FF8B41E400FC3007F08DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF9FF8B51E400FC3007F08DE /* Build configuration list for PBXNativeTarget "Tuita" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF9FF8B61E400FC3007F08DE /* Debug */,
+				AF9FF8B71E400FC3007F08DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF9FF89B1E400FC3007F08DE /* Project object */;
+}
