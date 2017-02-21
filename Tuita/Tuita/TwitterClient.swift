@@ -91,5 +91,24 @@ class TwitterClient: BDBOAuth1SessionManager {
             self.loginFailure?(error!)
         })
     }
-
+    
+    func favorite(id: String, success: @escaping () -> (), failure: @escaping (Error) -> ()) {
+        let urlString = "1.1/favorites/create.json?id=" + id
+        post(urlString, parameters: nil, progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
+            success()
+        }) { (task: URLSessionDataTask?, error: Error) in
+            failure(error)
+        }
+    }
+    
+    func retweet(id: String, success: @escaping () -> (), failure: @escaping (Error) -> ()) {
+        let urlString = "1.1/statuses/retweet/" + id + ".json"
+        post(urlString, parameters: nil, progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
+            success()
+        }) { (task:URLSessionDataTask?, error: Error) in
+            failure(error)
+        }
+    }
+    
 }
+
