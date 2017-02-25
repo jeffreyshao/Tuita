@@ -58,7 +58,7 @@ Describe any challenges encountered while building the app.
     limitations under the License.
     
     
-    # Project 5 - Tuita
+# Project 5 - Tuita
 
 Time spent: 12 hours spent in total
 
