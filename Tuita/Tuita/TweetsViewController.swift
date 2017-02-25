@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TweetsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TweetsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TweetCellDelegate {
     
     @IBOutlet weak var tableView: UITableView!
 
@@ -59,22 +59,57 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TweetCell", for: indexPath as IndexPath) as! TweetCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TweetCell", for: indexPath as IndexPath) as? TweetCell
         
-        cell.tweet = tweets![indexPath.row]
+        cell?.delegate = self
+        cell?.tweet = tweets![indexPath.row]
         
-        return cell
+        return cell!
+    }
+    
+    func aviTap(cell: TweetCell, tweet: Tweet){
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = mainStoryboard.instantiateViewController(withIdentifier: "profileViewController") as?
+            ProfileViewController{
+            vc.user = tweet.user
+            self.navigationController?.pushViewController(vc, animated: true)
+                
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "DetailsControllerSegue" {
+        
+        let tag = (sender as AnyObject).tag ?? 0
+        
+        if(tag == 2) {
+            
             let cell = sender as! UITableViewCell
             let indexPath = tableView.indexPath(for: cell)
             let tweet = tweets![(indexPath?.row)!]
             
-            let nameController = segue.destination as! TweetDetailsController
-            nameController.tweet = tweet
+            let profileViewController = segue.destination as! ProfileViewController
+            
+            profileViewController.user = User.currentUser
+            profileViewController.tweet = tweet
+            
         }
+            
+        else if(tag <= 0) {
+            
+            if(segue.identifier == "compose"){
+                let navigationController = segue.destination as! UINavigationController
+            }
+                
+            else if(segue.identifier == "DetailsControllerSegue"){
+                let cell = sender as! UITableViewCell
+                let indexPath = tableView.indexPath(for: cell)
+                let tweet = tweets![(indexPath?.row)!]
+                
+                let nameController = segue.destination as! TweetDetailsController
+                nameController.tweet = tweet
+            }
+        }
+        
     }
     
 

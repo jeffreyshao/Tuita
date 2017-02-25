@@ -8,6 +8,10 @@
 
 import UIKit
 
+@objc protocol TweetCellDelegate{
+    @objc optional func aviTap(cell: TweetCell, tweet: Tweet)
+}
+
 class TweetCell: UITableViewCell {
     
     @IBOutlet weak var avi: UIImageView!
@@ -28,6 +32,9 @@ class TweetCell: UITableViewCell {
             
             words.text = tweet.text
             avi.setImageWith((tweet.user?.profileURL)!)
+            self.avi.isUserInteractionEnabled = true
+            let aviTapped = UITapGestureRecognizer(target: self, action: #selector(aviTap(gesture:)))
+            self.avi.addGestureRecognizer(aviTapped)
             username.text = tweet.user?.name
             let handleText = (tweet.user?.twitterHandle)! as String
             handle.text = "@\(handleText)"
@@ -38,6 +45,8 @@ class TweetCell: UITableViewCell {
             
         }
     }
+    
+    weak var delegate: TweetCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -56,6 +65,7 @@ class TweetCell: UITableViewCell {
             }, failure: { (error: Error) in
                 print(error.localizedDescription)
         })
+        
     }
     
     @IBAction func onFave(_ sender: AnyObject) {
@@ -67,6 +77,9 @@ class TweetCell: UITableViewCell {
         
     }
     
+    func aviTap(gesture: UITapGestureRecognizer){
+        delegate?.aviTap!(cell: self, tweet: self.tweet)
+    }
 
 
 }

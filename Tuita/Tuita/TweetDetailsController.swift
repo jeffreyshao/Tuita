@@ -27,21 +27,18 @@ class TweetDetailsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("why isnt this working")
-        print(tweet?.text)
-        print(tweet?.user?.name)
+        print(tweet.timeCreated)
         
-        /*
-        avi.setImageWith((tweet.user?.profileURL)!)
-        
-        username.text = tweet.user?.name
+        words.text = tweet.text
         let handleText = (tweet.user?.twitterHandle)! as String
         handle.text = "@\(handleText)"
+        name.text = tweet.user?.name
+        avi.setImageWith((tweet.user?.profileURL)!)
         retweets.text = String(tweet.retweetCount)
         faves.text = String(tweet.favoritesCount)
         tweetID = tweet.tweetID
-        time.text = tweet.timeString
-         */
+        timeLabel.text = tweet.timeCreated
+        
         
     }
 
@@ -51,11 +48,28 @@ class TweetDetailsController: UIViewController {
     }
     
     @IBAction func onRT(_ sender: AnyObject) {
-        
+        TwitterClient.sharedInstance?.retweet(id: tweetID!, success: {
+            self.retweets.text = "\((self.tweet?.retweetCount)! + 1)"
+            }, failure: { (error: Error) in
+                print(error.localizedDescription)
+        })
     }
 
     @IBAction func onFave(_ sender: AnyObject) {
+        TwitterClient.sharedInstance?.favorite(id: tweetID!, success: {
+            self.faves.text = "\((self.tweet?.favoritesCount)! + 1)"
+            }, failure: { (error: Error) in
+                print(error.localizedDescription)
+        })
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if(segue.identifier == "compose"){
+            let navigationController = segue.destination as! UINavigationController
+        }
+
     }
     
     

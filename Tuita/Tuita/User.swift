@@ -13,9 +13,12 @@ class User: NSObject {
     var name: String?
     //var screenname: String?
     var profileURL: URL?
+    var headerURL: URL?
     var describer: String?
     var twitterHandle: String?
-    
+    var followingCount: Int?
+    var followerCount: Int?
+    var tweetCount: Int?
     var dictionary: NSDictionary?
     
     init(dictionary: NSDictionary){
@@ -30,7 +33,16 @@ class User: NSObject {
             profileURL = URL(string: profileUrlString)
         }
         
+        let headerUrlString = dictionary["profile_background_image_url_https"] as? String
+        if let headerUrlString = headerUrlString {
+            headerURL = URL(string: headerUrlString)
+        }
+        
         describer = dictionary["description"] as? String
+        tweetCount = dictionary["statuses_count"] as? Int
+        
+        followingCount = dictionary["friends_count"] as? Int
+        followerCount = dictionary["followers_count"] as? Int
         
     }
     

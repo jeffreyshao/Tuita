@@ -69,6 +69,25 @@ class TwitterClient: BDBOAuth1SessionManager {
             })
     }
     
+    func sendTweet(message: String, success: @escaping () -> (), failure: @escaping (Error) -> ()) {
+        post("/1.1/statuses/update.json?status=\(message)", parameters: nil, progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
+            print("posted tweet")
+            success()
+        }) { (task: URLSessionDataTask?, error: Error) in
+            failure(error)
+        }
+    }
+    
+    func reply(message: String, statusID: String, success: @escaping () -> (), failure: @escaping (Error) -> ()) {
+        post("/1.1/statuses/update.json?status=\(message)", parameters: ["in_reply_to_status_id": statusID], progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
+            print("replied to tweet")
+            success()
+        }) { (task: URLSessionDataTask?, error: Error) in
+            failure(error)
+        }
+    }
+    
+    
     func logout(){
         User.currentUser = nil
         deauthorize()

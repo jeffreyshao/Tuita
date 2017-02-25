@@ -16,8 +16,11 @@
 		AF9FF8AE1E400FC3007F08DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9FF8AD1E400FC3007F08DE /* Assets.xcassets */; };
 		AF9FF8B11E400FC3007F08DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9FF8AF1E400FC3007F08DE /* LaunchScreen.storyboard */; };
 		AFD6B9D91E401110000ABEBA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD6B9D81E401110000ABEBA /* LoginViewController.swift */; };
+		AFD97F461E616D1C0076B43A /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD97F451E616D1C0076B43A /* ComposeViewController.swift */; };
+		AFD97F481E6172BB0076B43A /* ReplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD97F471E6172BB0076B43A /* ReplyViewController.swift */; };
 		AFE4058E1E494D4D0009D30E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4058D1E494D4D0009D30E /* User.swift */; };
 		AFE405901E494D560009D30E /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4058F1E494D560009D30E /* Tweet.swift */; };
+		AFFB05411E5BC4FC0011AC14 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFB05401E5BC4FC0011AC14 /* ProfileViewController.swift */; };
 		E3A29613FF1BF0C8F4B53F8C /* Pods_Tuita.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E00C237E808D8E814EA5DCA1 /* Pods_Tuita.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,8 +38,11 @@
 		AF9FF8B01E400FC3007F08DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF9FF8B21E400FC3007F08DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFD6B9D81E401110000ABEBA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AFD97F451E616D1C0076B43A /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		AFD97F471E6172BB0076B43A /* ReplyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplyViewController.swift; sourceTree = "<group>"; };
 		AFE4058D1E494D4D0009D30E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AFE4058F1E494D560009D30E /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		AFFB05401E5BC4FC0011AC14 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E00C237E808D8E814EA5DCA1 /* Pods_Tuita.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tuita.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -118,6 +124,9 @@
 				AFD6B9D81E401110000ABEBA /* LoginViewController.swift */,
 				AF82CB8F1E50F5D300852731 /* TweetsViewController.swift */,
 				AF0C7B731E5A04A8001393C0 /* TweetDetailsController.swift */,
+				AFFB05401E5BC4FC0011AC14 /* ProfileViewController.swift */,
+				AFD97F451E616D1C0076B43A /* ComposeViewController.swift */,
+				AFD97F471E6172BB0076B43A /* ReplyViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -266,9 +275,12 @@
 				AF0C7B741E5A04A8001393C0 /* TweetDetailsController.swift in Sources */,
 				AFE405901E494D560009D30E /* Tweet.swift in Sources */,
 				AFD6B9D91E401110000ABEBA /* LoginViewController.swift in Sources */,
+				AFD97F461E616D1C0076B43A /* ComposeViewController.swift in Sources */,
 				AF82CB901E50F5D300852731 /* TweetsViewController.swift in Sources */,
+				AFFB05411E5BC4FC0011AC14 /* ProfileViewController.swift in Sources */,
 				AF82CB8C1E50E82700852731 /* TwitterClient.swift in Sources */,
 				AF9FF8A71E400FC3007F08DE /* AppDelegate.swift in Sources */,
+				AFD97F481E6172BB0076B43A /* ReplyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

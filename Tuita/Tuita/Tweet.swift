@@ -22,6 +22,8 @@ class Tweet: NSObject {
     var isFave: Bool?
     var tweetID: String?
     var timeString: String?
+    var timeCreated: String?
+    var headerURL: String?
     
 //    if let user =  dictionary["user"] as? NSDictionary {
 //        name = user["name"] as? String
@@ -51,6 +53,7 @@ class Tweet: NSObject {
         user = User(dictionary: dictionary["user"] as! NSDictionary)
         text = dictionary["text"] as? String
         profileURL = userDictionary?["profile_image_url"] as? String
+        headerURL = userDictionary?["profile_background_image_url_https"] as? String
         handle = dictionary["screen_name"] as? String
         retweetCount = (dictionary["retweet_count"] as? Int)!
         favoritesCount = (dictionary["favorite_count"] as? Int)!
@@ -72,6 +75,9 @@ class Tweet: NSObject {
             formatter.dateFormat = "EEE MMM d HH:mm:ss Z y"
             formatter.locale = Locale.init(identifier: "en_GB")
             timeStamp = formatter.date(from: timeStampString)
+            formatter.dateFormat = "EEE, dd MMM yyyy hh:mm:ss"
+            timeCreated = formatter.string(from: timeStamp!)
+            
         }
         else{
             timeString = "idk"
